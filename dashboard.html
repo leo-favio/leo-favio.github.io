@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Stick Notes</title>
+    <!-- Enlace a Google Fonts y hojas de estilo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><a class="linkLogo" href="dashboard.html">Stick Notes</a></h1>
+            </div>
+            <div class="nav-links">
+                <span>Bienvenido, <strong id="username-display"></strong></span>
+                <a href="#" id="logout-btn" class="btn btn-logout">Cerrar Sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="notes-panel">
+            <div class="toolbar">
+                <button id="add-note-btn" class="btn btn-primary">Agregar Nota</button>
+                <input type="text" id="filter-category" placeholder="Filtrar por categoría...">
+            </div>
+            <div id="notes-container"></div>
+        </section>
+    </main>
+
+    <!-- Modal para agregar/editar notas -->
+    <div id="note-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title">Nueva Nota</h2>
+            <!-- Elemento para mostrar mensajes de error -->
+            <p id="note-error" class="error-message" style="display: none;"></p>
+            <form id="note-form" class="note-form">
+                <input type="text" id="note-title" placeholder="Título" required>
+                <input type="text" id="note-category" placeholder="Categoría" required>
+                <textarea id="note-content" placeholder="Contenido" required></textarea>
+                <button type="submit" class="btn btn-primary">Guardar Nota</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="fdash">
+        <p>&copy; 2025 Stick Notes. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/db.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

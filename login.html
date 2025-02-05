@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión - Stick Notes</title>
+    <!-- Enlace a Google Fonts y hojas de estilo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><a class="linkLogo" href="index.html">Stick Notes</a></h1>
+            </div>
+            <div class="nav-links">
+                <a href="register.html" class="btn btn-register">Registrarse</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div class="auth-container">
+                <h2>Iniciar Sesión</h2>
+                <form id="login-form" class="auth-form">
+                    <input type="text" id="login-username" placeholder="Usuario" required>
+                    <input type="password" id="login-password" placeholder="Contraseña" required>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </form>
+                <p>¿No tienes una cuenta? <a href="register.html">Regístrate aquí</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Stick Notes. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/db.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

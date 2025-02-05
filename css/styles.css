@@ -1,0 +1,405 @@
+/* styles.css */
+
+/* Importar las fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
+
+:root {
+    /* Colores */
+    --primary-color: #FFEB3B; /* Amarillo */
+    --secondary-color: #2196F3; /* Azul */
+    --accent-color: #FF6F61; /* Coral */
+    --text-color: #333;
+    --background-color: #fff;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-secondary);
+    color: var(--text-color);
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: var(--background-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+.logo h1 {
+    font-family: var(--font-primary);
+    color: var(--secondary-color);
+    font-size: 1.5em;
+}
+
+.nav-links a {
+    margin-left: 1em;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.btn {
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-login {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.btn-login:hover {
+    background-color: #1976D2;
+}
+
+.btn-register {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.btn-register:hover {
+    background-color: #E64A45;
+}
+
+main {
+    padding: 2em;
+}
+
+#hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2em 0;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h2 {
+    font-family: var(--font-primary);
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: var(--text-color);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.btn-cta {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-cta:hover {
+    background-color: #1976D2;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+#features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 3em;
+}
+
+.feature {
+    flex: 1 1 30%;
+    text-align: center;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+.feature img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1em;
+}
+
+.feature h3 {
+    font-family: var(--font-primary);
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.feature p {
+    font-size: 1em;
+    color: #555;
+}
+
+footer {
+    background-color: var(--background-color);
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+    color: #777;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-bottom: 2em;
+    }
+
+    #features {
+        flex-direction: column;
+    }
+
+    .feature {
+        flex-basis: 100%;
+    }
+}
+
+/* styles.css */
+
+/* ... [Estilos previos del index.html] ... */
+
+/* Estilos para secciones de autenticación */
+.auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4em 2em;
+    background-color: #f5f5f5;
+}
+
+.auth-container {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.auth-container h2 {
+    font-family: var(--font-primary);
+    margin-bottom: 1em;
+    color: var(--text-color);
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 0.75em;
+    margin: 0.5em 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.auth-form input:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+.auth-form button {
+    width: 100%;
+    margin-top: 1em;
+}
+
+.auth-container p {
+    margin-top: 1em;
+    color: #555;
+}
+
+.auth-container a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el dashboard */
+#notes-panel {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 2em;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+#filter-category {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 60%;
+}
+
+#add-note-btn {
+    margin-right: 1em;
+}
+
+#notes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5em;
+}
+
+.note-card {
+    background-color: #fff;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.note-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.note-card h3 {
+    font-family: var(--font-primary);
+    margin-bottom: 0.5em;
+    color: var(--text-color);
+}
+
+.note-card .category {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 1em;
+}
+
+.note-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.card-actions {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.card-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 0.5em;
+    font-size: 1.2em;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.card-actions button:hover {
+    color: var(--secondary-color);
+}
+
+/* Estilos para el modal */
+.modal .modal-content {
+    max-width: 500px;
+    width: 90%;
+    margin: 5% auto;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 8px;
+    position: relative;
+}
+
+.note-form input,
+.note-form textarea {
+    width: 100%;
+    padding: 0.75em;
+    margin: 0.5em 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.note-form input:focus,
+.note-form textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+.note-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.note-form button {
+    width: 100%;
+    margin-top: 1em;
+}
+
+/* Estilos para mensajes de error */
+.error-message {
+    color: #d32f2f;
+    background-color: #ffcdd2;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 4px;
+}
+
+/* Estilos para el botón de cerrar sesión */
+.btn-logout {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.linkLogo:visited
+{
+    color: #2196F3;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.btn-logout:hover {
+    background-color: #E64A45;
+}
+
+.fdash {
+    width: 100%;
+    position: fixed;
+    margin-top: 320px;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: var(--background-color);
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+    color: #777;
+    font-size: 0.9em;
+}
